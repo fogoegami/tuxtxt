@@ -1215,7 +1215,7 @@ void *tuxtxt_CacheThread(void *arg)
 		if (readcnt != sizeof(pes_packet))
 		{
 #if DEBUG
-			printf ("TuxTxt: readerror\n");
+			printf ("TuxTxt: readerror");
 #endif
 			continue;
 		}
