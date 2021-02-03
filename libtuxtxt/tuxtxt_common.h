@@ -1212,13 +1212,7 @@ void *tuxtxt_CacheThread(void *arg)
 		ssize_t readcnt;
 		readcnt = read(tuxtxt_cache.dmx, &pes_packet, sizeof(pes_packet));
 
-		if (readcnt != sizeof(pes_packet))
-		{
-#if DEBUG
-			printf ("TuxTxt: readerror");
-#endif
-			continue;
-		}
+		if (readcnt != sizeof(pes_packet)) continue;
 
 		/* analyze it */
 		for (line = 0; line < 4; line++)
